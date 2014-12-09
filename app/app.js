@@ -28,17 +28,8 @@ app.configure('development', function(){
 //configure routes
 app.get('/', routes.index);
 
-app.get('/articles', function(req, res){
+app.get('/articles', routes.json, routes.articles);
 
- var news = new npr(process.env.KEY);
-
- news.getNews(function(response){
-  res.end(JSON.stringify(response));
- });
-
-
-
-});
 
 // app.get('/search/location/:lat/:long', routes.json, routes.instagram_location);
 
