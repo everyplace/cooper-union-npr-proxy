@@ -1,5 +1,5 @@
 var request = require('request')
-  , ig = require('instagram-node').instagram();
+  , npr = require('npr-news');
 
 
 exports.index = function(req, res){
